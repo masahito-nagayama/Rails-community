@@ -1,6 +1,6 @@
 <div class="content-wrapper">
 	<div class="content-block">
-		<% (1..10).each do |i| %>
+		<% @posts.each do |post| %>
 			<div class="content">
 				<div class="user-about">
 					<div class="image">
@@ -22,7 +22,7 @@
 				</div>	
 	
 				<div class="text">
-					<p>これはサンプルテキストです。これはサンプルテキストです。これはサンプルテキストです。これはサンプルテキストです。これはサンプルテキストです。これはサンプルテキストです。これはサンプルテキストです。これはサンプルテキストです。</p>
+					<p><%= post.content %></p>
 				</div>
 	
 				<div class="action-menu">
@@ -41,4 +41,3 @@
 		<div class="box"></div>
 	</div>
 </div>
-
