@@ -3,7 +3,6 @@ class ProfilesController < ApplicationController
 	before_action :find_profile, only: [:show, :edit, :update]
 
 	def show
-		@profile = Profile.find(params[:id])
 	end
 
 	def new
