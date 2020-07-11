@@ -4,19 +4,23 @@
 			<div class="content">
 				<div class="user-about">
 					<div class="image">
-						<%= image_tag "IMG_0826.JPG" %>
+						<% if post.user.image.attached? %>
+							<%= image_tag post.user.image %>
+						<% else %>
+							<%= image_tag "IMG_0826.JPG" %>
+						<% end %>
 					</div>
 					<div class="profile">
 						<div class="name-history">
 							<div class="name">
-								まさひと
+								<%= post.user.name %>
 							</div>
 							<div class="learning-history">
-								学習歴：８年
+								<%= "学習歴：#{post.user.learning_history}年" %>
 							</div>
 						</div>
 						<div class="purpose">
-							Ruby on Railsを学んでいる目的：エンジニアとして価値ある仕事がしたいから、Ruby on Railsを学んでいます！
+							<%= "Ruby on Railsを学んでいる目的： #{post.user.purpose}" %>
 						</div>
 					</div>
 				</div>	
